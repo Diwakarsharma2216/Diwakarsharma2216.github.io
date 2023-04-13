@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Heading, Text } from '@chakra-ui/react';
 
-const Typewriter = ({ text,delay=100 }) => {
+const MyTypewriter = ({ text,delay=100 }) => {
   const [currentText, setCurrentText] = useState('');
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const Typewriter = ({ text,delay=100 }) => {
     return () => clearInterval(intervalId);
   }, [text]);
 
-  return <Heading fontSize={{base:"2xl",md:"2xl"}}>{currentText}</Heading>;
+  return <Heading textAlign={{base:"left",md:"justify"}} fontSize={{base:"2xl",md:"2xl"}}>{currentText}</Heading>;
 };
 
-export default Typewriter;
+export default MyTypewriter;
