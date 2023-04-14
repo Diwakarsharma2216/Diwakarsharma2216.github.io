@@ -29,14 +29,14 @@ const Skills = () => {
   return (
     <div id="skills"  >
        <Box textAlign={"center"} mt="4%"><Text fontSize={{base:"4xl",md:"6xl"}} fontWeight={"bold"}>Skills</Text></Box>
-        <Container maxW={{base:"350px",md:"container.xl"}} data-aos="fade-right" >
+        <Container maxW={{base:"350px",md:"container.xl"}} data-aos="fade-right" className="skills_icons" >
           <SimpleGrid columns={{base:2,md:6}}  gap={12 }  >
           {/* main box */}
              
               {skilsdata.map((el)=>{
-           return    <Tilt options={{ max: 50 }}  style={{color:"green"}}>  <Box border={"2px solid red"}  borderRadius={"20px"}  h="200px" w={{base:"100px",md:"200px"}} data-aos="zoom-in" >
-                  <Box m={"auto"} fontSize={"120px"}>{el.logo}</Box>
-                  <Box>{el.text}</Box>
+           return    <Tilt options={{ max: 50 }}  style={{color:"green"}}>  <Box border={"2px solid red"} className="skills-card"  borderRadius={"20px"}  h="200px" w={{base:"100px",md:"200px"}} data-aos="zoom-in" >
+                  <Box m={"auto"} class="skills-card-img" fontSize={"120px"}>{el.logo}</Box>
+                  <Box className="skills-card-name">{el.text}</Box>
                 </Box> </Tilt >
               })}
            
