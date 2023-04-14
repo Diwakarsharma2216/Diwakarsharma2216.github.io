@@ -21,7 +21,7 @@ const Navbar = () => {
             <Box>   <a   className="nav-link skills" href='/#skills'>Skill</a></Box>
             <Box>   <a   className="nav-link projects" href='/#projects'>Project</a></Box>
             <Box>   <a   className="nav-link contact" href='/#contact'>Contact</a></Box>
-            <Box>   <a   className="nav-link resume" href='/#about'>Resume</a></Box>
+            <Box>   <a  id="resume-link-1"  className="nav-link resume" href='https://drive.google.com/file/d/1Qn5scNPEUAdWKwEONBYBfNW392hOipla/view?usp=sharing' download >Resume</a></Box>
 
           </HStack>
         

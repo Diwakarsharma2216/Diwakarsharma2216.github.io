@@ -27,7 +27,9 @@ const About = () => {
   </Container>
   </Flex>
   <Box textAlign={"center"}>
+  <a  id="resume-link-2" href="https://drive.google.com/file/d/1Qn5scNPEUAdWKwEONBYBfNW392hOipla/view?usp=sharing" download>
   <Button mt="2%" colorScheme='teal'>Resume</Button>
+  </a>
   </Box>
     </div>
   )
