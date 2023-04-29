@@ -1,53 +1,89 @@
-import React from 'react'
-
-import { Box, Container, HStack, Heading, VStack,Text } from '@chakra-ui/react'
-import MyTypewriter from './Typewriter '
-import { AiOutlineGithub,AiOutlineMail,AiFillLinkedin } from "react-icons/ai";
-import { BsFillTelephoneFill,BsFillGeoAltFill } from "react-icons/bs";
-import {Tilt} from "react-tilt"
-import Typewriter from 'typewriter-effect';
+import { SimpleGrid ,Box, Container, HStack,Text, Heading, Button} from '@chakra-ui/react'
+import React, { useEffect } from 'react'
+import { FaInstagram } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { FiLinkedin } from "react-icons/fi";
+import Typewriter from "typewriter-effect"
+import { VStack } from '@chakra-ui/react';
+import MyTypewriter from "./TypeWriter2";
+import HexagonProfilePic from './HexagonProfilePic';
+import myimg from "../asset/profile.png"
 const Home = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
-    <div id="home" className="home-parent" >
-      <Box >
-   
-      <Box mt="4%" >
-      
-       
-          <Container maxW={{base:"300px",md:"container.sm"}} >
-            <VStack spacing={"20"}>
-          <Box fontSize={{base:"4xl",md:"6xl"}} className="typeWritter">Hi,I'm Diwakar Shamra</Box>
-          <Text fontSize={"4xl"}><Typewriter
-    options={{
-    strings: ['A Mern Developer', 'World',"Apple","divide"],
-    autoStart: true,
-    loop: true,
-  }}
-/></Text>
-          <Box id="my-intro">
-            <MyTypewriter   text={"A passionate and detail-oriented Full Stack Web Developer with a solid understanding of front-end and back-end development  technologies. Possesses strong problem-solving skills and the ability to work collaboratively in a team environment. Dedicated   to continuously improving skills"}  delay={100} />
-           </Box>
-           <HStack spacing={"8"}>
-           <Tilt options={{ max: 50 }}  style={{color:"green"}}>  <Box id="contact-github"   > <AiOutlineGithub fontSize="32px" /></Box></Tilt>
-           <Tilt options={{ max: 50 }}  style={{color:"green"}}> <Box id="contact-phone"><BsFillTelephoneFill fontSize="32px" /></Box></Tilt>
-           <Tilt options={{ max: 50 }}  style={{color:"green"}}>  <Box id="contact-email"><AiOutlineMail  fontSize="32px" /></Box></Tilt>
-           <Tilt options={{ max: 50 }}  style={{color:"green"}}>  <Box  id="contact-linkedin"><AiFillLinkedin fontSize="32px" /></Box></Tilt>
-           <Tilt options={{ max: 50 }}  style={{color:"green"}}> <Box><BsFillGeoAltFill fontSize="32px" /></Box></Tilt>
-           </HStack>
-     </VStack>
-     </Container>
-       
-     
-        </Box>
-      </Box>
+    <div >
+      <Container maxW={"container.lg"} mt={"20px"}>
+<SimpleGrid columns={{base:1,md:2}} gap={10}>
+  <Box >
+  <VStack align="start" data-aos="fade-right">
+   <Box> <Text color={'whiteAlpha.700'} fontStyle={"bold"} fontSize={{base:"2xl",md:"4xl"}}>Hello, It's Me</Text></Box>
+    <Box><Text  color={'whiteAlpha.900 '} fontStyle={"bold"} fontSize={{base:"3xl",md:"5xl"}}>Diwakar Sharma</Text></Box>
+    <Box color={'whiteAlpha.700'} fontStyle={"bold"} fontSize={{base:"2xl",md:"4xl"}}>And I'm a<span style={{color:"cyan"}}><Typewriter
+options={{
+strings: ['Full Stack Web Developer', 'Mern Developer'],
+autoStart: true,
+loop: true,
+}}
+/></span></Box>
+   <Box mt={2}><Button>SEE MY WORK</Button></Box>
+   <Box>
+    <HStack  mt={2} spacing={"7"}>
+      <Box>  <Box fontSize={"30px"} color={"cyan.100"}><SiGmail /></Box></Box>
+      <Box>  <Box fontSize={"30px"} color={"cyan.100"}><FiLinkedin /></Box></Box>
+      <Box>  <Box fontSize={"30px"} color={"cyan.100"}><FaInstagram /></Box></Box>
+    </HStack>
+   </Box>
+  </VStack>
+</Box>
+
+
+<Box textAlign={"center"} data-aos="fade-left">
+  <HexagonProfilePic
+    name="Diwakar Sharma"
+    src={myimg}
+  />
+
+  </Box>
+</SimpleGrid>
+</Container>
     </div>
+   
   )
 }
 
 export default Home
 
-// A passionate and detail-oriented Full Stack Web Developer with 
-// a solid understanding of front-end and back-end development  
-// technologies. Possesses strong problem-solving skills and the 
-// ability to work collaboratively in a team environment. Dedicated   
-// to continuously improving skills
+
+
+{/* <Container maxW={"container.lg"} mt={"20px"}>
+<SimpleGrid columns={{base:1,md:2}} gap={10}>
+  <Box border="2px solid blue">
+  <VStack >
+    <Box><Text  textAlign={"left"} color={'whiteAlpha.700'} fontStyle={"bold"} fontSize={{base:"1xl",md:"2xl"}}>Hello, It's Me</Text></Box>
+    <Box><Text textAlign={"left"} color={'whiteAlpha.700'} fontStyle={"bold"} fontSize={{base:"1xl",md:"2xl"}}>Diwakar Sharma</Text></Box>
+    <Box color={'whiteAlpha.700'} fontStyle={"bold"} fontSize={{base:"1xl",md:"2xl"}}>And I'm a<span style={{color:"cyan"}}><Typewriter
+options={{
+strings: ['Full Stack Web Developer', 'Mern Developer'],
+autoStart: true,
+loop: true,
+}}
+/></span></Box>
+    <Box><MyTypewriter  text="A Diligent Full Stack Stack Developer, Developing websites using a variety of tools and technologies, including HTML, CSS, JavaScript, React, Node.js, Express.js, and MongoDB. Eager to embrace opportunities that offer challenge and to build innovative, efficient, and user- friendly web applications that meet the needs of modern businesses."  /></Box>
+  </VStack>
+</Box>
+
+
+<Box border="2px solid blue">
+  <HexagonProfilePic
+    name="John Doe"
+    src={myimg}
+  />
+
+  </Box>
+</SimpleGrid>
+</Container> */}

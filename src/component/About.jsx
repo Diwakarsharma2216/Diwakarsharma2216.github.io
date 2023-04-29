@@ -1,38 +1,39 @@
-import { Container, Heading, SimpleGrid,Box, Image, Text, Flex, Button} from '@chakra-ui/react'
-import React from 'react'
-import mylogo from "../assets/Profile.png"
+import { Container, Heading, Text, VStack,Box } from '@chakra-ui/react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import HexagonProfilePic from './HexagonProfilePic';
 
 const About = () => {
-  return (
-    <div id="about" class="about section">
-  <Heading textAlign={"center"} mt="3%">About me</Heading>
-  <Flex align={{base:"",md:"center"}}>
-  <Container maxW={{base:"300px",md:"container.lg"}} border={"1px solid red"}  >
-   
-    <SimpleGrid columns={{base:"1",md:"2"}} spacing={20} >
-      <Box m={"auto"}><Image
-       borderRadius='full'
-       maxH={"100%"}
-       maxW={"100%"}
-      
-     
-       boxSize={{base:"200px",md:"350px"}}
-       src={mylogo}
-     
-       alt='Dan Abramov'
-       /></Box>
-      <Box><Text >Hi Everyone, I am Diwakar Sharma from Gorakhpur, Uttar Pradesh. I have completed my Higher Secondary Education from Mahatma Gandhi Inter College Gorakhpur , Uttar Pradesh. As a Full Stack Web Developer, I possess a broad range of technical skills, including proficiency in HTML, CSS, JavaScript, and Node.js. I have a deep understanding of database design, web services, and API integration, and I am committed to staying up-to-date with the latest trends and technologies in the field.</Text></Box>
-    </SimpleGrid>
-   
-  </Container>
-  </Flex>
-  <Box textAlign={"center"}>
-  <a  id="resume-link-2" href="https://drive.google.com/file/d/1Qn5scNPEUAdWKwEONBYBfNW392hOipla/view?usp=sharing" download>
-  <Button mt="2%" colorScheme='teal'>Resume</Button>
-  </a>
-  </Box>
-    </div>
-  )
-}
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // specify animation duration in milliseconds
+    });
+  }, []);
 
-export default About
+  return (
+    <div>
+       
+   
+    <Container maxW="container.lg" color={"white"}>
+     
+      <VStack spacing={8} align="start" py={12}>
+        <Heading size="lg" data-aos="fade-right">
+          About Me
+        </Heading>
+        <Text data-aos="fade-right" color={'whiteAlpha.700'} fontStyle={"bold"} fontSize={{base:"1xl",md:"2xl"}}>
+        My name is Diwakar Sharma, and I am a full-stack developer from Gorakhpur, Uttar Pradesh
+        </Text>
+        <Text data-aos="fade-right" color={'whiteAlpha.700'} fontStyle={"bold"} fontSize={{base:"1xl",md:"2xl"}}>
+        I have a passion for creating robust and scalable web applications, and I have honed my skills through years of experience in the field. With my strong technical 
+        </Text>
+        <Text data-aos="fade-right" color={'whiteAlpha.700'} fontStyle={"bold"} fontSize={{base:"1xl",md:"2xl"}}>
+       knowledge and dedication to producing high-quality work, I am confident in my ability to deliver results that exceed expectations. I am always looking for new challenges and opportunities to learn, and I am excited to continue growing as a developer
+        </Text>
+      </VStack>
+    </Container>
+    </div>
+  );
+};
+
+export default About;

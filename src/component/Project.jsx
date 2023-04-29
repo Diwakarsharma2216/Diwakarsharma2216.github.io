@@ -1,57 +1,82 @@
-import { Heading, SimpleGrid,Image,Box,Text, Container, VStack, HStack, Button } from '@chakra-ui/react'
-import React from 'react'
-import { DiReact } from 'react-icons/di'
-
+import React, { useEffect } from 'react'
+import { Box, Container, HStack, Image, VStack,Flex, SimpleGrid ,Heading} from '@chakra-ui/react';
+import { DiGithubBadge } from "react-icons/di";
+import { BsBoxArrowUpRight } from "react-icons/bs";
+import { SiBootstrap, SiHtml5, SiMaterialui, SiRedux, SiTypescript } from "react-icons/si";
+import { SiJavascript } from "react-icons/si";
+import { SiCss3 } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
+import { IoLogoNodejs } from "react-icons/io";
+import { SiMongodb } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
+import { FaMdb } from "react-icons/fa";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 const Project = () => {
+  const logoarr=[{htmllogo:<SiHtml5 />},{csslogo:<SiCss3 />},{jslogo:<SiJavascript />},{react:<FaReact />},{charaui:<SiHtml5 />}]
+  const Featuresarr=["Login","Signup","Sort","Filter","Cart","Payment"]
   const projectdata=[
-    {image:"https://i.ibb.co/6vdbyj2/Screenshot-405.png",heading:"Myntra Clone",desc:"First Backend Project with NodeJS, ExpressJS and MongoDB. Used EJS to render views. Main functionalities were : Register/Login using JWT, Sorting and Filtering in the backend, Cart and Wish List and many more.",reactlogo:<DiReact />,htmlogo:<DiReact />,jslogo:<DiReact />,chakrlogo:<DiReact />},
-    {image:"https://news-cdn.softpedia.com/images/news2/Dropbox-2-9-Enters-Development-with-Streaming-Sync-Feature-442773-2.jpg",heading:"Backend API for Drive / DropBox Clone",desc:"Backend API for a google drive like app built using NodeJS, Express, Mongoose, MongoDB Atlas and AWS S3 for storage. A solo project. CRUD operations for users ",reactlogo:<DiReact />,htmlogo:<DiReact />,jslogo:<DiReact />,chakrlogo:<DiReact />},
-    {image:"https://i.ibb.co/6vdbyj2/Screenshot-405.png",heading:"Myntra Clone",desc:"First Backend Project with NodeJS, ExpressJS and MongoDB. Used EJS to render views. Main functionalities were : Register/Login using JWT, Sorting and Filtering in the backend, Cart and Wish List and many more.",reactlogo:<DiReact />,htmlogo:<DiReact />,jslogo:<DiReact />,chakrlogo:<DiReact />},
-    {image:"https://news-cdn.softpedia.com/images/news2/Dropbox-2-9-Enters-Development-with-Streaming-Sync-Feature-442773-2.jpg",heading:"Backend API for Drive / DropBox Clone",desc:"Backend API for a google drive like app built using NodeJS, Express, Mongoose, MongoDB Atlas and AWS S3 for storage. A solo project. CRUD operations for users ",reactlogo:<DiReact />,htmlogo:<DiReact />,jslogo:<DiReact />,chakrlogo:<DiReact />}
+    {img:"",title:"",des:"",logoarr,Featuresarr},
+    {img:"",title:"",des:"",logoarr,Featuresarr},
+    {img:"",title:"",des:"",logoarr,Featuresarr},
+   
   ]
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, [])
   return (
-    <div  id="projects">
-      <Heading mt={"10px"} textAlign={"center"}>PROJECTS</Heading>
-      <Container  maxW={"container.xl"} textAlign={"center"}>
-      {projectdata.map((el)=><Box m={4} border={"2px solid cyan"} h={{md:"400px"}} className="project-card"> 
-        <SimpleGrid columns={{base:1,md:2}} spacing={5}>
-          <Box className="project-image">
-            <Image src={el.image} h={{base:"200px",md:"200px"}} w={{base:400,md:600}} m="auto" />
-          </Box>
-          <Box className="project-about">
-            <VStack>
-           <Box className="project-title">
-            <Heading mt={9}>{el.heading}</Heading>
-            </Box> 
-            <Box>
-            <Text className="project-description" textAlign={"center"} >{el.desc}</Text>
-            </Box>
-            <Box className="project-tech-stack">
-              <HStack fontSize={"36px"}>
-                <Box>{el.reactlogo}</Box>
-                <Box>{el.reactlogo}</Box>
-                <Box>{el.reactlogo}</Box>
-                <Box>{el.reactlogo}</Box>
-                <Box>{el.reactlogo}</Box>
-              </HStack>
-            </Box>
-            <Box>
-              <HStack mb={3}>
-                <Box>
-              <Button colorScheme='teal' variant='outline'>See this Live</Button>
-            
+    <>
+    <Heading data-aos="fade-left" textAlign={"center"} mt={"5"}  fontWeight={"extrabold"} color={"whiteAlpha.800"}>My Project</Heading>
+    <Container maxW={"container.lg"}>
+      {projectdata.map((el)=><Box
+    w='100%'
+    data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom"
+    h={{base:"640px",md:"400px"}}
+    bgGradient="linear(to-r, #9797ad, #142041)"
+    borderRadius='xl'
+    boxShadow='2xl'
+    p={8}
+    m="2.5"
+  >
+  <SimpleGrid columns={{base:1,md:2}} >
+    <Box boxShadow={"dark-lg"} ><Image src='https://camo.githubusercontent.com/07805558f1f04fe51185891f7aecec142c6fd531a92c226ed04021b5b5c030b1/68747470733a2f2f692e706f7374696d672e63632f643031516b7359622f53637265656e73686f742d39382e706e67'  height={{base:"200px",md:"350px"}}   alt="diwa"/></Box>
+    <Box   mt={{base:"5",md:"1"}}  ml={{base:"1",md:"5"}} border={"2px solid grey"}>
+      <VStack>
+        <Box  color={"whiteAlpha.900"} fontWeight={"extrabold"} fontSize={"4xl"} >Apple Replica</Box>
+        <Box color={"whiteAlpha.900"} fontWeight={"bold"} fontSize={"1.5xl"}  textAlign={"left"}>Apple Inc (Apple) designs, manufactures, and markets smartphones, tablets, personal computers (PCs), portable and wearable devices. The company also offers software related services, accessories, and third-party digital content and applications.</Box>
+        <Box mt={"5"}>
+          <HStack   fontSize={"4xl"} color={"cyan.100"} spacing={6}>
+              <Box boxShadow={"dark-lg"}>
+                <Box fontSize={"2xl"}><FaReact /></Box>
+                <Box fontSize={"20px"}>React</Box>
+              </Box>
+              <Box boxShadow={"dark-lg"}>
+              <Box fontSize={"2xl"}><SiJavascript /></Box>
+                <Box  fontSize={"20px"}>React</Box> 
                 </Box>
-                <Box>
-                <Button colorScheme='teal' variant='outline'>View Code</Button>
+              <Box boxShadow={"dark-lg"} >
+              <Box fontSize={"2xl"} textAlign={"center"}><SiCss3 /></Box>
+                <Box fontSize={"20px"}>React</Box>  
                 </Box>
-              </HStack>
-            </Box>
-            </VStack>
-          </Box>
-        </SimpleGrid>
-      </Box>)}
-      </Container>
-    </div>
+          </HStack>
+        </Box>
+        <Box>
+          <HStack ml={"-25px"} mt={"2.5"} fontSize={"4xl"} color={"cyan"} spacing={6}>
+            <Box><DiGithubBadge /></Box>
+            <Box><BsBoxArrowUpRight /></Box>
+          </HStack>
+        </Box>
+      
+      </VStack>
+    </Box>
+  </SimpleGrid>
+  
+  </Box>)}
+  
+  </Container>
+  </>
   )
 }
 

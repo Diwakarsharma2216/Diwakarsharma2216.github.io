@@ -17,7 +17,7 @@ const MyTypewriter = ({ text,delay=100 }) => {
     return () => clearInterval(intervalId);
   }, [text]);
 
-  return <Heading textAlign={{base:"left",md:"justify"}} fontSize={{base:"2xl",md:"2xl"}}>{currentText}</Heading>;
+  return <Heading color={'whiteAlpha.700'} fontWeight={"semibold"} fontSize={{base:"1xl",md:"2xl"}}  >{currentText}</Heading>;
 };
 
 export default MyTypewriter;
