@@ -15,11 +15,12 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
-  Image
+  Image,
+  VStack
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-const Links = ['Dashboard', 'Projects', 'Team'];
+// const Links = ['Home', 'About', 'Skills','Project',"Contact"];
 
 const NavLink = ({ children }) => (
   <Link
@@ -39,7 +40,7 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <>
+    <div id="nav-menu">
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}  width="100%" left={"0"} right="0"  position="sticky" top="0"   z-index="1000" >
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'} >
           <IconButton
@@ -61,42 +62,29 @@ export default function Navbar() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            <Menu>
-              <MenuButton
-                as={Button}
-                rounded={'full'}
-                variant={'link'}
-                cursor={'pointer'}
-                minW={0}>
-                <Avatar
-                  size={'sm'}
-                  src={
-                    logo
-                  }
-                />
-              </MenuButton>
-              <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
-              </MenuList>
-            </Menu>
+           
+            <Button onClick={()=>alert("helo")} colorScheme='teal' variant='outline'>Resume</Button>
           </Flex>
         </Flex>
 
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
+              
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+              <a  className="nav-link home" href="/#home">
+              Home
+            </a>
+               
+              ))
+              }
+              
             </Stack>
           </Box>
         ) : null}
       </Box>
 
      
-    </>
+    </div>
   );
 }
