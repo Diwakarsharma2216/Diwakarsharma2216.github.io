@@ -32,14 +32,14 @@ const Skills = () => {
     AOS.refresh();
   }, [])
   return (
-    <div>
+    <div className="skills-card">
        <Heading textAlign={"center"}  fontWeight={"extrabold"} color={"whiteAlpha.800"} data-aos="fade-right">My Technical skills</Heading>
        <Container maxW={"container.lg"} mt={"10px"}>
        <SimpleGrid columns={{base:2,md:6}} gap={15} textAlign={"center"}>
       {skilldata.map((el)=><Box key={el.id} boxShadow={"dark-lg"}>
         <Box data-aos="zoom-in">
-           <Box ml="25%" fontSize={"80px"} color={"cyan.100"}>{el.logo}</Box>
-          <Text fontSize={"20px"} fontWeight={"extrabold"} color={"whiteAlpha.600"}>{el.text}</Text>
+           <Box className="skills-card-img" ml="25%" fontSize={"80px"} color={"cyan.100"}>{el.logo}</Box>
+          <Text className="skills-card-name" fontSize={"20px"} fontWeight={"extrabold"} color={"whiteAlpha.600"}>{el.text}</Text>
         </Box>
       </Box>)}
       </SimpleGrid>

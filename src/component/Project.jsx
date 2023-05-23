@@ -26,7 +26,7 @@ const Project = () => {
     AOS.refresh();
   }, [])
   return (
-    <>
+    <div >
     <Heading data-aos="fade-left" textAlign={"center"} mt={"5"}  fontWeight={"extrabold"} color={"whiteAlpha.800"}>My Project</Heading>
     <Container maxW={"container.lg"}>
       {projectdata.map((el)=><Box
@@ -39,15 +39,16 @@ const Project = () => {
     boxShadow='2xl'
     p={8}
     m="2.5"
+    className="project-card"
   >
   <SimpleGrid columns={{base:1,md:2}} >
-    <Box boxShadow={"dark-lg"} ><Image src='https://camo.githubusercontent.com/07805558f1f04fe51185891f7aecec142c6fd531a92c226ed04021b5b5c030b1/68747470733a2f2f692e706f7374696d672e63632f643031516b7359622f53637265656e73686f742d39382e706e67'  height={{base:"200px",md:"350px"}}   alt="diwa"/></Box>
+    <Box boxShadow={"dark-lg"}  ><Image src='https://camo.githubusercontent.com/07805558f1f04fe51185891f7aecec142c6fd531a92c226ed04021b5b5c030b1/68747470733a2f2f692e706f7374696d672e63632f643031516b7359622f53637265656e73686f742d39382e706e67'  height={{base:"200px",md:"350px"}}   alt="diwa"/></Box>
     <Box   mt={{base:"5",md:"1"}}  ml={{base:"1",md:"5"}} border={"2px solid grey"}>
       <VStack>
-        <Box  color={"whiteAlpha.900"} fontWeight={"extrabold"} fontSize={"4xl"} >Apple Replica</Box>
-        <Box color={"whiteAlpha.900"} fontWeight={"bold"} fontSize={"1.5xl"}  textAlign={"left"}>Apple Inc (Apple) designs, manufactures, and markets smartphones, tablets, personal computers (PCs), portable and wearable devices. The company also offers software related services, accessories, and third-party digital content and applications.</Box>
+        <Box  color={"whiteAlpha.900"} fontWeight={"extrabold"} fontSize={"4xl"} class="project-title" >Apple Replica</Box>
+        <Box color={"whiteAlpha.900"} fontWeight={"bold"} fontSize={"1.5xl"} class="project-description"  textAlign={"left"}>Apple Inc (Apple) designs, manufactures, and markets smartphones, tablets, personal computers (PCs), portable and wearable devices. The company also offers software related services, accessories, and third-party digital content and applications.</Box>
         <Box mt={"5"}>
-          <HStack   fontSize={"4xl"} color={"cyan.100"} spacing={6}>
+          <HStack  class="project-tech-stack"  fontSize={"4xl"} color={"cyan.100"} spacing={6}>
               <Box boxShadow={"dark-lg"}>
                 <Box fontSize={"2xl"}><FaReact /></Box>
                 <Box fontSize={"20px"}>React</Box>
@@ -64,8 +65,8 @@ const Project = () => {
         </Box>
         <Box>
           <HStack ml={"-25px"} mt={"2.5"} fontSize={"4xl"} color={"cyan"} spacing={6}>
-            <Box><DiGithubBadge /></Box>
-            <Box><BsBoxArrowUpRight /></Box>
+            <Box className="project-github-link"><a href=""><DiGithubBadge /></a></Box>
+            <Box className="project-deployed-link"><a href=""><BsBoxArrowUpRight /></a></Box>
           </HStack>
         </Box>
       
@@ -76,7 +77,7 @@ const Project = () => {
   </Box>)}
   
   </Container>
-  </>
+  </div>
   )
 }
 

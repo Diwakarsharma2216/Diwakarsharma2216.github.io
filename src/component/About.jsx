@@ -12,10 +12,10 @@ const About = () => {
   }, []);
 
   return (
-    <div>
+    <div id="about" className="about section">
        
-   
-    <Container maxW="container.lg" color={"white"}>
+   <Box  id="user-detail-intro">
+    <Container maxW="container.lg" color={"white"} >
      
       <VStack spacing={8} align="start" py={12}>
         <Heading size="lg" data-aos="fade-right">
@@ -32,7 +32,9 @@ const About = () => {
         </Text>
       </VStack>
     </Container>
+    </Box>
     </div>
+
   );
 };
 

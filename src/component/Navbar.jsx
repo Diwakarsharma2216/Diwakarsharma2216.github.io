@@ -20,7 +20,8 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-// const Links = ['Home', 'About', 'Skills','Project',"Contact"];
+const Links = [['Home',"home"],['About',"about"], ['Skills',"skills"],['Project',"projects"],['Contact',"contact"]];
+
 
 const NavLink = ({ children }) => (
   <Link
@@ -57,13 +58,20 @@ export default function Navbar() {
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+              <a  className={`nav-link ${link[1]}`} href={`/#${link[1]}`}>
+              {link[0]}
+            
+            </a>
+               
+              ))
+              }
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
            
-            <Button onClick={()=>alert("helo")} colorScheme='teal' variant='outline'>Resume</Button>
+          <a target="_blank"  className="nav-link resume" id="resume-link-1" href="https://drive.google.com/file/d/1Qn5scNPEUAdWKwEONBYBfNW392hOipla/view?usp=sharing" download>
+            Resume
+          </a>
           </Flex>
         </Flex>
 
@@ -72,8 +80,9 @@ export default function Navbar() {
             <Stack as={'nav'} spacing={4}>
               
               {Links.map((link) => (
-              <a  className="nav-link home" href="/#home">
-              Home
+              <a  className={`nav-link ${link[1]}`} href="/#home">
+              {link[0]}
+            
             </a>
                
               ))

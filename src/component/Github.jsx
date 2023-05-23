@@ -30,7 +30,7 @@ const Github = () => {
      
      <ScrollTrigger onEnter={() => setCouter(true)} onExit={() => setCouter(false)}>
       <Container maxW={"container.lg"} mt={"10"}  >
-        <Box  fontWeight={"extrabold"} color={"whiteAlpha.600"} textAlign={"center"} ><GitHubCalendar  username="diwakarsharma2216"     /> </Box>
+        <Box  className="react-activity-calendar" fontWeight={"extrabold"} color={"whiteAlpha.600"} textAlign={"center"} ><GitHubCalendar  username="diwakarsharma2216"     /> </Box>
          <Flex  direction={{base:"column",md:"row"}} fontSize={"3xl"} mt={"2%"} fontWeight={"extrabold"} color={"whiteAlpha.800"} justify={"space-evenly"} textAlign={{base:"center"}}>
           <Box >
            

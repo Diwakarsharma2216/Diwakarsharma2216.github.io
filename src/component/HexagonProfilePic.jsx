@@ -5,6 +5,7 @@ function HexagonProfilePic(props) {
     <Avatar
       name={props.name}
       src={props.src}
+      
       css={{
         width: "350px",
         height: "350px",
