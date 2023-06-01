@@ -17,7 +17,7 @@ const Home = () => {
     AOS.refresh();
   }, []);
   return (
-    <div >
+    <div id="home" >
       <Container maxW={"container.lg"} mt={"20px"}>
 <SimpleGrid columns={{base:1,md:2}} gap={10}>
   <Box >
@@ -31,7 +31,7 @@ autoStart: true,
 loop: true,
 }}
 /></span></Box>
-   <Box mt={2}><Button>SEE MY WORK</Button></Box>
+   <Box mt={2}><Button><a href='/#projects'>SEE MY WORK</a></Button></Box>
    <Box>
     <HStack  mt={2} spacing={"7"}>
       <Box  id="contact-email"> <a  id="contact-email" href="https://diwakarsharma2216@gmail.com"><Box fontSize={"30px"} color={"cyan.100"}><SiGmail /></Box></a></Box>

@@ -28,7 +28,7 @@ import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs';
 
 export default function ContactUs() {
   return (
-    
+    <div  id="contact">
     <Container bg="#6a82ca" maxW="container.lg" mt={0} centerContent overflow="hidden" mb={{base:"1vh"}}>
       <Flex>
         <Box
@@ -163,6 +163,7 @@ export default function ContactUs() {
         </Box>
       </Flex>
     </Container>
+    </div>
   );
 }
 
