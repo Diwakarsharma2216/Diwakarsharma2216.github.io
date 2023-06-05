@@ -2,7 +2,6 @@ import { Container, Heading, Text, VStack,Box } from '@chakra-ui/react';
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import HexagonProfilePic from './HexagonProfilePic';
 
 const About = () => {
   useEffect(() => {

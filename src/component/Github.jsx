@@ -1,11 +1,6 @@
 import { Box, Container, Flex, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react'
 import React, { useEffect, useRef, useState } from 'react'
 import GitHubCalendar from 'react-github-calendar';
-import { FaCode, FaGit } from 'react-icons/fa';
-import { RiLightbulbFlashLine } from 'react-icons/ri';
-import { BiUserVoice } from "react-icons/bi";
-import { AiOutlineFundProjectionScreen } from "react-icons/ai";
-import { VscGraph } from "react-icons/vsc";
 import ScrollTrigger from "react-scroll-trigger";
 import AOS from 'aos';
 import 'aos/dist/aos.css';

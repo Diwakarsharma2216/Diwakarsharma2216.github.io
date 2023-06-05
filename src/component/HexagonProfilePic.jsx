@@ -1,11 +1,12 @@
-import { Avatar } from "@chakra-ui/react";
+import { Avatar, Image } from "@chakra-ui/react";
 
 function HexagonProfilePic(props) {
   return (
-    <Avatar
+    
+    <Image
       name={props.name}
       src={props.src}
-      
+      className="home-img "
       css={{
         width: "350px",
         height: "350px",

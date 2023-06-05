@@ -2,16 +2,10 @@ import logo from "../asset/logo.png"
 import {
   Box,
   Flex,
-  Avatar,
   HStack,
   Link,
   IconButton,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
@@ -19,6 +13,8 @@ import {
   VStack
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+
+
 
 const Links = [['Home',"home"],['About',"about"], ['Skills',"skills"],['Project',"projects"],['Contact',"contact"]];
 
@@ -68,10 +64,10 @@ export default function Navbar() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-           
-          <a target="_blank"  className="nav-link resume" id="resume-link-1" href="https://drive.google.com/file/d/1Qn5scNPEUAdWKwEONBYBfNW392hOipla/view?usp=sharing" download>
-            Resume
-          </a>
+         
+          <Button >
+          <a class="nav-link resume" id="resume-button-1" href="https://drive.google.com/u/0/uc?id=1BxmB_O79aTDdO-Q3T_ciRKa63BmCqFXj&amp;export=download" target="_blank" rel="noreferrer" download="Diwakar-Sharma-Resume.pdf">Resume</a>
+    </Button>
           </Flex>
         </Flex>
 

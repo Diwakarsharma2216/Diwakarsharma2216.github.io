@@ -1,14 +1,14 @@
-import { SimpleGrid ,Box, Container, HStack,Text, Heading, Button} from '@chakra-ui/react'
+import { SimpleGrid ,Box, Container, HStack,Text, Button, Image} from '@chakra-ui/react'
 import React, { useEffect } from 'react'
-import { FaGithubAlt, FaGithubSquare, FaInstagram } from "react-icons/fa";
+import {  FaGithubSquare } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import AOS from "aos";
+
 import "aos/dist/aos.css";
 import { FiLinkedin } from "react-icons/fi";
 import Typewriter from "typewriter-effect"
 import { VStack } from '@chakra-ui/react';
-import MyTypewriter from "./TypeWriter2";
-import HexagonProfilePic from './HexagonProfilePic';
+// import HexagonProfilePic from './HexagonProfilePic';
 import myimg from "../asset/profile.png"
 import { BsFillTelephoneFill } from 'react-icons/bs';
 const Home = () => {
@@ -31,7 +31,14 @@ autoStart: true,
 loop: true,
 }}
 /></span></Box>
+  <HStack>
    <Box mt={2}><Button><a href='/#projects'>SEE MY WORK</a></Button></Box>
+   <Box>
+   <Button  >
+   <a id="resume-button-2"  href="https://drive.google.com/u/0/uc?id=1BxmB_O79aTDdO-Q3T_ciRKa63BmCqFXj&amp;export=download" target="_blank" rel="noreferrer" download="Diwakar-Sharma-Resume.pdf">Resume</a>
+    </Button>
+   </Box>
+   </HStack>
    <Box>
     <HStack  mt={2} spacing={"7"}>
       <Box  id="contact-email"> <a  id="contact-email" href="https://diwakarsharma2216@gmail.com"><Box fontSize={"30px"} color={"cyan.100"}><SiGmail /></Box></a></Box>
@@ -44,13 +51,28 @@ loop: true,
 </Box>
 
 
-<Box textAlign={"center"} data-aos="fade-left" className="home-img">
-  <HexagonProfilePic
+
+<div style={{
+        width: "350px",
+        height: "350px",
+        position: "relative",
+        overflow: "hidden",
+        borderRadius:"20px",
+        borderRadius: "none",
+        clipPath: "polygon(50% 0%, 91% 26%, 91% 74%, 50% 100%, 9% 74%, 9% 26%)",
+        WebkitClipPath:
+          "polygon(50% 0%, 91% 26%, 91% 74%, 50% 100%, 9% 74%, 9% 26%)",
+        backgroundImage:
+          "linear-gradient(to right, #caac15, #ff4e50, #f9d423)",
+        // add vendor prefixes for Safari support
+      }}
+       textAlign={"center"} data-aos="fade-left" borderRadius={"50%"}  className="home-img css-21dkjt aos-init aos-animate">
+  {/* <HexagonProfilePic
     name="Diwakar Sharma"
     src={myimg}
-  />
-
-  </Box>
+  /> */}
+<Image src={myimg}  />
+  </div >
 </SimpleGrid>
 </Container>
     </div>
