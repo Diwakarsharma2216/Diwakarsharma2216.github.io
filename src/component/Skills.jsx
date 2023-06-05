@@ -1,14 +1,13 @@
-import { Heading,Box, Image, Text, SimpleGrid, Container ,Flex} from '@chakra-ui/react'
+import { Heading,Box,  Text, SimpleGrid, Container ,Flex} from '@chakra-ui/react'
 import React, { useEffect } from 'react'
-import { SiBootstrap, SiChakraui, SiFirebase, SiHtml5, SiMaterialui, SiRedux, SiTypescript } from "react-icons/si";
+import { SiBootstrap, SiChakraui, SiFirebase, SiHtml5, SiRedux, SiTypescript } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
 import { SiCss3 } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { IoLogoNodejs } from "react-icons/io";
 import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
-import { FaMdb } from "react-icons/fa";
-import CountUp from 'react-countup';
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 const Skills = () => {
@@ -34,8 +33,8 @@ const Skills = () => {
   return (
     <div id="skills">
     <div>
-       <Heading textAlign={"center"}  fontWeight={"extrabold"} color={"whiteAlpha.800"} data-aos="fade-right">My Technical skills</Heading>
-       <Container maxW={"container.lg"} mt={"10px"}>
+       <Heading textAlign={"center"}  fontWeight={"extrabold"} color={"whiteAlpha.800"} mt={"2px"} mb="2px" data-aos="fade-right">My Technical skills</Heading>
+       <Container maxW={"container.xl"} mt={"10px"}>
        <SimpleGrid columns={{base:2,md:6}} gap={15} textAlign={"center"}>
       {skilldata.map((el,i)=><Box key={i} boxShadow={"dark-lg"}  className="skills-card">
         <Box data-aos="zoom-in">

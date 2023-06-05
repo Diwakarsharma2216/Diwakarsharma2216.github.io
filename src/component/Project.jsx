@@ -34,8 +34,8 @@ const Project = () => {
   }, [])
   return (
     <div id="projects">
-    <Heading data-aos="fade-left" textAlign={"center"} mt={"5"}  fontWeight={"extrabold"} color={"whiteAlpha.800"}>My Project</Heading>
-    <Container maxW={"container.lg"}>
+    <Heading data-aos="fade-left" textAlign={"center"} mt={"9"}  fontWeight={"extrabold"} color={"whiteAlpha.800"}>My Project</Heading>
+    <Container maxW={"container.xl"}>
       {projectdata.map((el)=><Box
     w='100%'
     data-aos="fade-up"

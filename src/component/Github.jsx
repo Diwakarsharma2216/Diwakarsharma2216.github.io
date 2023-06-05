@@ -24,8 +24,8 @@ const Github = () => {
      data-aos-easing="ease-in-sine" fontWeight={"extrabold"} color={"whiteAlpha.800"}>My Github</Heading>
      
      <ScrollTrigger onEnter={() => setCouter(true)} onExit={() => setCouter(false)}>
-      <Container maxW={"container.lg"} mt={"10"}  >
-        <Box  className="react-activity-calendar" fontWeight={"extrabold"} color={"whiteAlpha.600"} textAlign={"center"} ><GitHubCalendar  username="diwakarsharma2216"     /> </Box>
+      <Container maxW={"container.xl"} mt={"10"}  >
+        <Box  className="react-activity-calendar" fontWeight={"extrabold"} color={"whiteAlpha.600"}  ><GitHubCalendar  username="diwakarsharma2216"     /> </Box>
          <Flex  direction={{base:"column",md:"row"}} fontSize={"3xl"} mt={"2%"} fontWeight={"extrabold"} color={"whiteAlpha.800"} justify={"space-evenly"} textAlign={{base:"center"}}>
           <Box >
            

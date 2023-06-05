@@ -19,20 +19,6 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 const Links = [['Home',"home"],['About',"about"], ['Skills',"skills"],['Project',"projects"],['Contact',"contact"]];
 
 
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={'md'}
-    _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
-    }}
-    href={'#'}>
-    {children}
-  </Link>
-);
-
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -65,7 +51,7 @@ export default function Navbar() {
           </HStack>
           <Flex alignItems={'center'}>
          
-          <Button >
+          <Button colorScheme="cyan" >
           <a class="nav-link resume" id="resume-button-1" href="https://drive.google.com/u/0/uc?id=1BxmB_O79aTDdO-Q3T_ciRKa63BmCqFXj&amp;export=download" target="_blank" rel="noreferrer" download="Diwakar-Sharma-Resume.pdf">Resume</a>
     </Button>
           </Flex>
@@ -75,12 +61,11 @@ export default function Navbar() {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               
-              {Links.map((link) => (
-              <a  className={`nav-link ${link[1]}`} href="/#home">
+            {Links.map((link) => (
+              <a  className={`nav-link ${link[1]}`} href={`/#${link[1]}`}>
               {link[0]}
             
             </a>
-               
               ))
               }
               

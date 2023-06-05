@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Heading, Text } from '@chakra-ui/react';
+import { Heading } from '@chakra-ui/react';
 
 const MyTypewriter = ({ text,delay=100 }) => {
   const [currentText, setCurrentText] = useState('');

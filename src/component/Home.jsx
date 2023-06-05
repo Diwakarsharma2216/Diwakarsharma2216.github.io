@@ -11,6 +11,7 @@ import { VStack } from '@chakra-ui/react';
 // import HexagonProfilePic from './HexagonProfilePic';
 import myimg from "../asset/profile.png"
 import { BsFillTelephoneFill } from 'react-icons/bs';
+import HexagonProfilePic from './HexagonProfilePic';
 const Home = () => {
   useEffect(() => {
     AOS.init();
@@ -18,7 +19,7 @@ const Home = () => {
   }, []);
   return (
     <div id="home" >
-      <Container maxW={"container.lg"} mt={"20px"}>
+      <Container maxW={"container.xl"} mt={"20px"}>
 <SimpleGrid columns={{base:1,md:2}} gap={10}>
   <Box >
   <VStack align="start" data-aos="fade-right">
@@ -34,7 +35,7 @@ loop: true,
   <HStack>
    <Box mt={2}><Button><a href='/#projects'>SEE MY WORK</a></Button></Box>
    <Box>
-   <Button  >
+   <Button mt={2} >
    <a id="resume-button-2"  href="https://drive.google.com/u/0/uc?id=1BxmB_O79aTDdO-Q3T_ciRKa63BmCqFXj&amp;export=download" target="_blank" rel="noreferrer" download="Diwakar-Sharma-Resume.pdf">Resume</a>
     </Button>
    </Box>
@@ -52,26 +53,9 @@ loop: true,
 
 
 
-<div style={{
-        width: "350px",
-        height: "350px",
-        position: "relative",
-        overflow: "hidden",
-        borderRadius:"20px",
-        borderRadius: "none",
-        clipPath: "polygon(50% 0%, 91% 26%, 91% 74%, 50% 100%, 9% 74%, 9% 26%)",
-        WebkitClipPath:
-          "polygon(50% 0%, 91% 26%, 91% 74%, 50% 100%, 9% 74%, 9% 26%)",
-        backgroundImage:
-          "linear-gradient(to right, #caac15, #ff4e50, #f9d423)",
-        // add vendor prefixes for Safari support
-      }}
-       textAlign={"center"} data-aos="fade-left" borderRadius={"50%"}  className="home-img css-21dkjt aos-init aos-animate">
-  {/* <HexagonProfilePic
-    name="Diwakar Sharma"
-    src={myimg}
-  /> */}
-<Image src={myimg}  />
+<div  textAlign={"center"} data-aos="fade-left" borderRadius={"50%"}  >
+  <HexagonProfilePic name="Diwakar Sharma" src={myimg} />
+
   </div >
 </SimpleGrid>
 </Container>
