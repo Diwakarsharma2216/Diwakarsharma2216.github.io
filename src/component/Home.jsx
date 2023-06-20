@@ -36,7 +36,7 @@ loop: true,
    <Box mt={2}><Button><a href='/#projects'>SEE MY WORK</a></Button></Box>
    <Box>
    <Button mt={2} >
-   <a id="resume-button-2"  href="https://drive.google.com/u/0/uc?id=1BxmB_O79aTDdO-Q3T_ciRKa63BmCqFXj&amp;export=download" target="_blank" rel="noreferrer" download="Diwakar-Sharma-Resume.pdf">Resume</a>
+   <a id="resume-button-2"  href="https://drive.google.com/u/0/uc?id=1x8r1PQ6W3QCZEYkPpyR4QQZ8MnzDNowh&amp;export=download" target="_blank" rel="noreferrer" download="Diwakar-Sharma-Resume.pdf">Resume</a>
     </Button>
    </Box>
    </HStack>
