@@ -8,7 +8,7 @@ import { Box, ChakraProvider } from '@chakra-ui/react'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ChakraProvider>
-    <Box bg="gray.700">
+    <Box bg="gray.800">
     <App />
     </Box>
   </ChakraProvider>
